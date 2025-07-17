@@ -55,7 +55,7 @@ return {
               icon = "  ",
               desc = "New File",
               group = "Default",
-              action = ":enew<CR>",
+              action = "enew",
               key = "e",
             },
             {
