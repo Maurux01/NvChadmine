@@ -70,7 +70,7 @@ return {
               icon = "  ",
               desc = "New File",
               group = "Default",
-              action = "enew",
+              action = ":enew<CR>",
               key = "e",
             },
             {
