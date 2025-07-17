@@ -5,4 +5,3 @@ return {
   { import = "plugins.preview" },
   { import = "plugins.advanced" },
 }
-t
