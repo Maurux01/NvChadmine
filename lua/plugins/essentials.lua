@@ -158,4 +158,17 @@ return {
     config = true,
     cmd = { "LiveServerStart", "LiveServerStop" },
   },
+  -- Historial de yank (portapapeles mejorado)
+  {
+    "gbprod/yanky.nvim",
+    opts = {},
+    keys = {
+      { "<leader>p", "<Plug>(YankyPutAfter)", mode = { "n", "x" }, desc = "Pegar después" },
+      { "<leader>P", "<Plug>(YankyPutBefore)", mode = { "n", "x" }, desc = "Pegar antes" },
+      { "<leader>gp", "<Plug>(YankyGPutAfter)", mode = { "n", "x" }, desc = "Pegar después (línea)" },
+      { "<leader>gP", "<Plug>(YankyGPutBefore)", mode = { "n", "x" }, desc = "Pegar antes (línea)" },
+      { "<leader>n", "<Plug>(YankyCycleForward)", desc = "Siguiente en historial" },
+      { "<leader>N", "<Plug>(YankyCycleBackward)", desc = "Anterior en historial" },
+    },
+  },
 } 

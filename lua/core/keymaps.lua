@@ -23,3 +23,14 @@ vim.keymap.set("n", "<leader>le", ":LiveServerStop<CR>", { desc = "Detener Live 
 
 -- Ver errores de línea (diagnósticos LSP)
 vim.keymap.set("n", "<leader>xx", ":Telescope diagnostics<CR>", { desc = "Ver errores de línea (diagnósticos)" })
+
+-- Selección mejorada en modo visual
+vim.keymap.set("n", "<leader>a", "ggVG", { desc = "Seleccionar todo el archivo" })
+vim.keymap.set("n", "<leader>l", "V", { desc = "Seleccionar línea actual" })
+
+-- Copiar y pegar mejorado
+vim.keymap.set("v", "<leader>y", '"+y', { desc = "Copiar al portapapeles del sistema" })
+vim.keymap.set("n", "<leader>Y", '"+yg_', { desc = "Copiar línea al portapapeles del sistema" })
+vim.keymap.set("n", "<leader>y", '"+y', { desc = "Copiar al portapapeles del sistema" })
+vim.keymap.set("n", "<leader>p", '"+p', { desc = "Pegar desde portapapeles del sistema" })
+vim.keymap.set("n", "<leader>P", '"+P', { desc = "Pegar antes desde portapapeles del sistema" })
