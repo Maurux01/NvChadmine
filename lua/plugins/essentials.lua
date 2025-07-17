@@ -162,14 +162,6 @@ return {
   {
     "gbprod/yanky.nvim",
     opts = {},
-    keys = {
-      { "<leader>p", "<Plug>(YankyPutAfter)", mode = { "n", "x" }, desc = "Pegar después" },
-      { "<leader>P", "<Plug>(YankyPutBefore)", mode = { "n", "x" }, desc = "Pegar antes" },
-      { "<leader>gp", "<Plug>(YankyGPutAfter)", mode = { "n", "x" }, desc = "Pegar después (línea)" },
-      { "<leader>gP", "<Plug>(YankyGPutBefore)", mode = { "n", "x" }, desc = "Pegar antes (línea)" },
-      { "<leader>n", "<Plug>(YankyCycleForward)", desc = "Siguiente en historial" },
-      { "<leader>N", "<Plug>(YankyCycleBackward)", desc = "Anterior en historial" },
-    },
   },
   -- Debugging (nvim-dap)
   {
@@ -213,5 +205,11 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     opts = {},
+  },
+  -- Which-key para keybinds organizados
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = require "configs.which-key",
   },
 } 
