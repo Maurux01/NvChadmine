@@ -171,4 +171,47 @@ return {
       { "<leader>N", "<Plug>(YankyCycleBackward)", desc = "Anterior en historial" },
     },
   },
+  -- Debugging (nvim-dap)
+  {
+    "mfussenegger/nvim-dap",
+    dependencies = {
+      "rcarriga/nvim-dap-ui",
+      "theHamsta/nvim-dap-virtual-text",
+      "jay-babu/mason-nvim-dap.nvim",
+    },
+    opts = {},
+  },
+  -- Testing (neotest)
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim",
+    },
+    opts = {},
+  },
+  -- Git avanzado
+  {
+    "f-person/git-blame.nvim",
+    opts = {},
+  },
+  {
+    "akinsho/git-conflict.nvim",
+    opts = {},
+  },
+  -- Gestión de proyectos
+  {
+    "ahmedkhalf/project.nvim",
+    opts = {},
+  },
+  -- Refactoring automático
+  {
+    "ThePrimeagen/refactoring.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    opts = {},
+  },
 } 
