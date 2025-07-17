@@ -57,7 +57,6 @@ return {
               group = "Default",
               action = function()
                 vim.cmd("enew")
-                vim.cmd("startinsert")
               end,
               key = "e",
             },
@@ -131,5 +130,32 @@ return {
       "saadparwaiz1/cmp_luasnip",
     },
     opts = {},
+  },
+  -- Screenshot de código
+  {
+    "michaelrommel/nvim-silicon",
+    cmd = { "Silicon" },
+    opts = {},
+  },
+  -- Comentarios mejorados
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup()
+    end,
+  },
+  -- LazyGit
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = { "LazyGit" },
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+  },
+  -- Live Server
+  {
+    "barrett-ruth/live-server.nvim",
+    build = "./install.sh",
+    config = true,
+    cmd = { "LiveServerStart", "LiveServerStop" },
   },
 } 
