@@ -63,7 +63,7 @@ return {
               icon = "⚙️  ",
               desc = "Themes",
               group = "NvChad",
-              action = "Telescope themes",P
+              action = "Telescope themes",
               key = "t",
             },
             {
