@@ -74,9 +74,9 @@ return {
         o = { ":lua require('neotest').output.open()<CR>", "Test output" },
       },
       
-      -- Git (usando g para evitar conflictos)
-      ["<leader>g"] = {
-        name = "+git",
+      -- Git avanzado (usando gg para evitar conflicto con g de NvChad)
+      ["<leader>gg"] = {
+        name = "+git-advanced",
         b = { ":GitBlameToggle<CR>", "Git blame" },
         c = { ":GitConflictListQf<CR>", "Git conflicts" },
       },
@@ -89,20 +89,20 @@ return {
         i = { ":lua require('refactoring').refactor('Inline Variable')<CR>", "Inline variable" },
       },
       
-      -- Formateo (manteniendo fm de NvChad)
-      ["<leader>f"] = {
-        name = "+format",
-        m = { ":Format<CR>", "Formatear archivo" },
-      },
+      -- Formateo (usando fm para evitar conflicto con f de NvChad)
+      ["<leader>fm"] = { ":Format<CR>", "Formatear archivo" },
       
       -- Selección
       ["<leader>a"] = { "ggVG", "Seleccionar todo" },
       
-      -- Portapapeles
-      ["<leader>y"] = { '"+y', "Copiar al sistema" },
-      ["<leader>Y"] = { '"+yg_', "Copiar línea al sistema" },
-      ["<leader>p"] = { '"+p', "Pegar desde sistema" },
-      ["<leader>P"] = { '"+P', "Pegar antes desde sistema" },
+      -- Portapapeles (usando c para copy y v para paste para evitar conflictos)
+      ["<leader>c"] = {
+        name = "+copy-paste",
+        y = { '"+y', "Copiar al sistema" },
+        Y = { '"+yg_', "Copiar línea al sistema" },
+        p = { '"+p', "Pegar desde sistema" },
+        P = { '"+P', "Pegar antes desde sistema" },
+      },
       
       -- Yank history (usando nn para evitar conflicto con n de NvChad)
       ["<leader>nn"] = {
@@ -116,7 +116,10 @@ return {
     
     -- Keybinds para modo visual
     wk.register({
-      ["<leader>y"] = { '"+y', "Copiar al sistema" },
+      ["<leader>c"] = {
+        name = "+copy-paste",
+        y = { '"+y', "Copiar al sistema" },
+      },
       ["<leader>r"] = {
         name = "+refactor",
         e = { ":lua require('refactoring').refactor('Extract Function')<CR>", "Extract function" },
