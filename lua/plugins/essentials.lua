@@ -55,7 +55,10 @@ return {
               icon = "  ",
               desc = "New File",
               group = "Default",
-              action = "enew",
+              action = function()
+                vim.cmd("enew")
+                vim.cmd("startinsert")
+              end,
               key = "e",
             },
             {
