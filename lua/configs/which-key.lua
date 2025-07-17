@@ -10,7 +10,7 @@ return {
   config = function(_, opts)
     local wk = require("which-key")
     wk.setup(opts)
-    
+     
     -- Registrar todos los keybinds personalizados (evitando conflictos con NvChad)
     wk.register({
       -- Acceso rápido
